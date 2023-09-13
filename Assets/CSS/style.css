@@ -1,106 +1,229 @@
 :root {
-    --brightAccent: #6ca048;
-    --darkAccent: #253522;
+    --brightAccent: #4865a0;
+    --darkAccent: #100f3a;
     --textColor: #ffffff;
-    --background: #000000;
+    --background: rgba(0, 0, 0, 1);
+    --border-vertical: solid .25em var(--darkAccent);
 }
 
-body{
+body {
     background-color: var(--background);
     color: var(--textColor);
     font-size: 16px;
     line-height: 1.5;
-    margin-left: auto; margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
     width: auto;
     padding: .25em;
     margin: 1em;
 }
 
 header {
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
     margin: 20 10 10 px;
-    width: 100%;
-    text-align: center;
+    text-align: left;
+    border-bottom: solid .25em var(--darkAccent);
+    
 }
 
-header ul {
-    display: flex;
-    flex-flow: row;
-    align-content: flex-end;
+.nameMarquee {
+    width: 20em;
+    margin: 1em;
+
 }
 
+.contactInfo {
 
-main {
-    height: 80%;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin: 1em;
+}
+
+.contactInfo li {
+    padding: .5em;
+}
+
+.personalInfo-side {
+ min-width: 10em;
+ border-right:var(--border-vertical);
+ margin-top: 1em;
+
+}
+.personalInfo {
+    display: flex;
+    flex-flow: row nowrap;
     flex: 1 1 100%;
     align-items: stretch;
-    justify-content: center;
+    justify-content: space-between;
+
+}
+
+.personalInfo-text {
+    margin:1em;
+    width:max-content;
+    text-align: left;
+}
+
+.portfolioContainer {
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 1 1 100%;
+    align-items: stretch;
+    justify-content: stretch;
+
+}
+
+.portfolio-side {
+    min-width: 10em;
+ border-right:var(--border-vertical);
+ margin-top: 1em;
+}
+
+.portfolioBlocks {
+    height: 80%;
+    display: flex;
+    flex-flow: row-reverse wrap-reverse;
+    align-items: stretch;
+    justify-content: stretch;
+}
+
+.project-card {
+    Flex: 1 1 400px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    justify-content: stretch;
 }
 
 
 h1 {
     font-size: 200%;
-    color:var(--brightAccent);
-    
+    color: var(--brightAccent);
+
 }
 
 h2 {
     padding: 0 1em;
     font-size: 150%;
-    color:var(--brightAccent);
+    color: var(--brightAccent);
+    border-right: solid .25em var(--darkAccent);
+}
+h3 {
+    padding: 0 1em;
+    font-size: 120%;
+    color: var(--brightAccent);
+    border-right: solid .25em var(--darkAccent);
 }
 
 .project-card {
 
     padding: 10px;
-    border: dashed var(--textColor);
+    border: solid var(--textColor);
     width: 30%;
     min-width: 300px;
-    color:var(--brightAccent);
+    color: var(--brightAccent);
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
-    margin: 2em 1em 0 ;
+    margin: 2em 1em 0;
 }
 
 
-.project-header {
+/* .project-header {
     position: relative;
     margin-top: -20px;
     border: solid var(--textColor);
     background-color: var(--background);
     border-radius: 10px;
-}
+} */
 
 .project-description {
     padding: .5em
 }
 
-.code-box {
-    padding: 10px;
-    border: solid var(--background);
-    color: var(--textColor);
-    background-image: linear-gradient(to bottom, var(--brightAccent) 0%, var(--darkAccent) 100%);
-    border-radius: 10px;
-    font-family: monospace;
-    height: 100%
-}
 
-pre { 
-    white-space: pre-wrap; 
-    overflow-x: auto; }
+
 /* from https://css-tricks.com/considerations-styling-pre-tag/ */
 
 .project-card .project-header {
     border-radius: 8px;
     transition: all 0.5s ease-in-out;
-}    
-    .project-card:hover, .project-card:hover .card-head {
-    box-shadow:inset 0px 0px 8px var(--brightAccent), 0 0 15px var(--darkAccent);
 }
 
-/* on <pre> click, select all contents so the code is highlighted */
-.code-box pre:active {
-    user-select: all;
-  }
+.project-card:hover {
+    box-shadow: inset 0px 0px 20px var(--brightAccent), 0 0 15px var(--darkAccent);
+}
+
+
+#imagep1 {
+    height: 400px;
+    width: 100%;
+    background-image:
+            linear-gradient(to bottom,
+              rgba(0, 0, 0, 1),
+              rgba(0, 0, 0, 1) 10%,
+              rgba(0, 0, 0, 0)), url(
+'../Images/Bucky.jpg');
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+}
+#imagep2 {
+    height: 400px;
+    width: 100%;
+    background-image:
+            linear-gradient(to bottom,
+              rgba(0, 0, 0, 1),
+              rgba(0, 0, 0, 1) 10%,
+              rgba(0, 0, 0, 0)), url(
+'../Images/Bucky.jpg');
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+}
+#imagep3 {
+    height: 400px;
+    width: 100%;
+    background-image:
+            linear-gradient(to bottom,
+              rgba(0, 0, 0, 1),
+              rgba(0, 0, 0, 1) 10%,
+              rgba(0, 0, 0, 0)), url(
+'../Images/Bucky.jpg');
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+}
+
+#imagep4 {
+    height: 400px;
+    width: 100%;
+    background-image:
+            linear-gradient(to bottom,
+              rgba(0, 0, 0, 1),
+              rgba(0, 0, 0, 1) 10%,
+              rgba(0, 0, 0, 0)), url(
+'../Images/Bucky.jpg');
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+}
+
+#imagep5 {
+    height: 400px;
+    width: 100%;
+    background-image:
+            linear-gradient(to bottom,
+              rgba(0, 0, 0, 1),
+              rgba(0, 0, 0, 1) 10%,
+              rgba(0, 0, 0, 0)), url(
+'../Images/Bucky.jpg');
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+}
