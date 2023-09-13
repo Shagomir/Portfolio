@@ -1,8 +1,8 @@
 :root {
-    --brightAccent: #4865a0;
-    --darkAccent: #100f3a;
-    --textColor: #ffffff;
-    --background: rgba(0, 0, 0, 1);
+    --brightAccent: #90b2f8;
+    --darkAccent: #1a2b78;
+    --textColor: #c2c2c2;
+    --background: rgb(0, 0, 0);
     --border-vertical: 10px double var(--darkAccent);
 }
 
@@ -48,8 +48,17 @@ header {
     padding: .5em;
 }
 
-.personalInfo-side {
-    min-width: 10em;
+
+
+/* .personalInfo-side {
+    min-width: 6em;
+    border-right: var(--border-vertical);
+    margin-top: 1em;
+
+} */
+
+h2[class$="-side"] {
+    min-width: 6em;
     border-right: var(--border-vertical);
     margin-top: 1em;
 
@@ -79,11 +88,11 @@ header {
 
 }
 
-.portfolio-side {
-    min-width: 10em;
+/* .portfolio-side {
+    min-width: 6em;
     border-right: var(--border-vertical);
     margin-top: 1em;
-}
+} */
 
 .portfolioBlocks {
     display: flex;
@@ -167,6 +176,12 @@ span[id^="imagep"]{
     background-size: cover;
     background-position: center;
     display: inline-block;
+}
+
+footer {
+    padding: 1em;
+    text-align: center;
+
 }
 
 #imagep1 {
