@@ -2,8 +2,13 @@
     --brightAccent: #90b2f8;
     --darkAccent: #1a2b78;
     --textColor: #c2c2c2;
-    --background: rgb(0, 0, 0);
-    --border-vertical: 10px double var(--darkAccent);
+
+    --background: rgba(0, 0, 0); /*This will update ALL backgrounds, 
+                                    including the fade on the cards.*/
+
+    --clear: rgba(0, 0, 0, 0); /* Transparent black - can be updated but 
+                                    should have 0 for the alpha channel. */
+    --border: 10px double var(--darkAccent); 
 }
 
 body {
@@ -20,13 +25,18 @@ body {
     margin: 1em;
 }
 
+h1 { font-size: 200%; color: var(--brightAccent)}
+h2 { font-size: 175%; color: var(--brightAccent)}
+h3 { font-size: 140%; color: var(--brightAccent)}
+h4 { font-size: 120%; color: var(--brightAccent)}
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 20 10 10 px;
     text-align: left;
-    border-bottom: var(--border-vertical);
+    border-bottom: var(--border);
 
 }
 
@@ -49,17 +59,11 @@ header {
 }
 
 
-
-/* .personalInfo-side {
-    min-width: 6em;
-    border-right: var(--border-vertical);
-    margin-top: 1em;
-
-} */
+/* This ensures that the two side bars have the same properties and sizes.  */
 
 h2[class$="-side"] {
     min-width: 6em;
-    border-right: var(--border-vertical);
+    border-right: var(--border);
     margin-top: 1em;
 
 }
@@ -88,15 +92,14 @@ h2[class$="-side"] {
 
 }
 
-/* .portfolio-side {
-    min-width: 6em;
-    border-right: var(--border-vertical);
-    margin-top: 1em;
-} */
+
+/* The reverse row and wrap here are to ensure the newest (lowest) 
+items added to the portfolio are displayed more prominently on the 
+front of the page. */
 
 .portfolioBlocks {
     display: flex;
-    flex-flow: row-reverse wrap-reverse;
+    flex-flow: row-reverse wrap-reverse; 
     align-items: stretch;
     justify-content: stretch;
     
@@ -120,15 +123,13 @@ h1 {
 
 h2 {
     font-size: 150%;
-    color: var(--brightAccent);
-    border-right: solid .25em var(--darkAccent);
+    color: var(--brightAccent)
 }
 
 h3 {
 
     font-size: 120%;
-    color: var(--brightAccent);
-    /* border-right: solid .25em var(--darkAccent); */
+    color: var(--brightAccent)
 }
 
 .project-card {
@@ -141,34 +142,25 @@ h3 {
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
-    margin: 2em 1em 0;
+    margin: 2em 1em 0
 }
-
-
-/* .project-header {
-    position: relative;
-    margin-top: -20px;
-    border: solid var(--textColor);
-    background-color: var(--background);
-    border-radius: 10px;
-} */
 
 .project-description {
     padding: .5em
 }
 
-
-
-/* from https://css-tricks.com/considerations-styling-pre-tag/ */
-
 .project-card {
     border-radius: 8px;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out
 }
 
 .project-card:hover {
-    box-shadow: inset 0px 0px 20px var(--brightAccent), 0 0 15px var(--darkAccent);
+    box-shadow: inset 0px 0px 10px var(--brightAccent), 0 0 15px var(--darkAccent);
 }
+
+/* This gives all background images on the card the same properties, except 
+for the background image which displays with a gradient overlay to make the 
+text readable.  */
 
 span[id^="imagep"]{
     height: 250px;
@@ -184,13 +176,15 @@ footer {
 
 }
 
+/* Images go here to apply the gradient over the same background image. */
+
 #imagep1 {
    
     background-image:
         linear-gradient(to bottom,
-            rgba(0, 0, 0, 1),
-            rgba(0, 0, 0, 1) 10%,
-            rgba(0, 0, 0, 0)), url('../Images/Bucky.jpg');
+            var(--background),
+            var(--background) 10%,
+            var(--clear)), url('../Images/Bucky.jpg');
    
 }
 
@@ -198,9 +192,9 @@ footer {
 
     background-image:
         linear-gradient(to bottom,
-            rgba(0, 0, 0, 1),
-            rgba(0, 0, 0, 1) 10%,
-            rgba(0, 0, 0, 0)), url('../Images/Bucky.jpg');
+            var(--background),
+            var(--background) 10%,
+            var(--clear)), url('../Images/Bucky.jpg');
 
 }
 
@@ -208,9 +202,9 @@ footer {
 
     background-image:
         linear-gradient(to bottom,
-            rgba(0, 0, 0, 1),
-            rgba(0, 0, 0, 1) 10%,
-            rgba(0, 0, 0, 0)), url('../Images/Bucky.jpg');
+            var(--background),
+            var(--background) 10%,
+            var(--clear)), url('../Images/Bucky.jpg');
 
 }
 
@@ -218,9 +212,9 @@ footer {
 
     background-image:
         linear-gradient(to bottom,
-            rgba(0, 0, 0, 1),
-            rgba(0, 0, 0, 1) 10%,
-            rgba(0, 0, 0, 0)), url('../Images/horiseon.PNG');
+            var(--background),
+            var(--background) 10%,
+            var(--clear)), url('../Images/horiseon.PNG');
 
 }
 
@@ -228,9 +222,9 @@ footer {
 
     background-image:
         linear-gradient(to bottom,
-            rgba(0, 0, 0, 1),
-            rgba(0, 0, 0, 1) 10%,
-            rgba(0, 0, 0, 0)), url('../Images/css\ cheatsheet.PNG');
+            var(--background),
+            var(--background) 10%,
+            var(--clear)), url('../Images/css\ cheatsheet.PNG');
    
 }
 
