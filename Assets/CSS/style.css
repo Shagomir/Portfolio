@@ -5,11 +5,12 @@
 
     --background: rgb(0, 0, 0);
     /*  This will update ALL backgrounds,       */
-    /*                                  including the fade on the cards.        */
+    /*  including the fade on the cards.        */
 
     --clear: #00000000;
     /* Transparent black - can be updated but   */
-    /*                                should have 0 for the alpha channel.     */
+    /* should have 0 for the alpha channel.     */
+
     --border: 10px double var(--darkAccent);
 
     --blendHeight: 5.5em;
@@ -20,7 +21,7 @@ body {
     color: var(--textColor);
     font-size: 16px;
     line-height: 1.5;
-    margin:auto;
+    margin: auto;
     width: auto;
     padding: .25em;
     margin: 1em;
@@ -62,7 +63,7 @@ header {
 
 }
 
-.contactInfo {
+.contactInfo, .navigation {
 
     display: flex;
     flex-flow: row nowrap;
@@ -70,7 +71,8 @@ header {
     margin: 1em;
 }
 
-.contactInfo li {
+.contactInfo li,
+.navigation li {
     padding: .5em;
 }
 
@@ -84,13 +86,12 @@ h2[class$="-side"] {
 
 }
 
-.personalInfo {
+.personalInfo, .portfolioContainer, .contactContainer {
     display: flex;
     flex-flow: row nowrap;
     flex: 1 1 100%;
     align-items: stretch;
     justify-content: space-between;
-
 }
 
 .personalInfo-text {
@@ -103,18 +104,12 @@ h2[class$="-side"] {
     flex: 1 1 300px;
     width: 20%;
     object-fit: contain;
+    /* Forces image to maintain ratios. 
+    https://stackoverflow.com/questions/30788131/maintain-image-aspect-ratio-when-changing-height*/
     border-radius: 8px;
-  
-}
-
-.portfolioContainer {
-    display: flex;
-    flex-flow: row nowrap;
-    flex: 1 1 100%;
-    align-items: stretch;
-    justify-content: stretch;
 
 }
+
 
 
 /* The reverse row and wrap here are to ensure the newest (lowest) 
@@ -139,7 +134,7 @@ front of the page. */
     align-items: stretch;
     justify-content: flex-start;
 
-    min-width: 300px;
+    min-width: 280px;
     width: 30%;
     height: 300px;
 
@@ -153,6 +148,8 @@ front of the page. */
     transition: all 0.5s ease-in-out
 }
 
+/* code below makes the whole project card a clickable link. https://www.w3docs.com/snippets/css/how-to-make-a-div-a-clickable-link.html */
+
 .project-link {
     position: absolute;
     width: 100%;
@@ -160,7 +157,9 @@ front of the page. */
     top: 0;
     left: 0;
     z-index: 1;
-  }
+} 
+
+
 
 .project-card p {
     font-size: 90%;
@@ -206,7 +205,7 @@ text readable.  */
 
 span[id^="imagep"] {
     position: absolute;
-    border: solid 10px var(var(--background));
+    border: solid 10px var(--background);
     border-radius: 8px;
     box-shadow: inset 0px 0px 20px var(--background);
     top: -2px;
@@ -223,6 +222,11 @@ footer {
     padding: 1em;
     text-align: center;
 
+}
+
+footer p {
+    font-size: 80%;
+    color: var(--darkAccent)
 }
 
 /* Images go here to apply the gradient over the same background image. */
@@ -277,16 +281,17 @@ footer {
 
 }
 
-/* vertical style for mobile */
+/* vertical style for mobile and tablets */
 
 @media (max-width:768px) {
 
-    h1{
+    h1 {
         text-align: center;
     }
+
     header {
         display: flex;
-        flex-flow:column nowrap;
+        flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
 
@@ -297,35 +302,44 @@ footer {
         border-right: none;
         border-bottom: var(--border);
         margin-top: 1em;
-    
+
     }
+
     .personalInfo {
-        flex-flow: column wrap;    
+        flex-flow: column wrap;
         margin-left: 0;
         margin-right: 0;
     }
-    .personalPhoto{
+
+    .personalPhoto {
         margin-left: 0;
         margin-right: 0;
         width: 100%;
 
     }
-    .project-card{
+
+    .project-card {
         height: fit-content;
     }
-    .portfolioContainer {
+
+    .portfolioContainer, .contactContainer {
         flex-flow: column nowrap;
     }
+
     .portfolioBlocks {
         display: flex;
         flex-flow: column-reverse nowrap;
         align-items: center;
-        justify-content: stretch;   
+        justify-content: stretch;
     }
+
     .project-card {
         flex: 1 1 100%;
         min-height: 300px;
         width: 90%;
-   
+
+    }
+    .contactInfo{
+        justify-content: center;
     }
 }

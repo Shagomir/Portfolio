@@ -12,14 +12,15 @@
 <body>
     <header>
         <h1 class="nameMarquee">Matthew Knudson</h1>
-
-        <ul class="contactInfo">
-            <li>m.j.knudson@gmail.com</li>
-            <li><a href="https://github.com/Shagomir"> Github</a></li>
-            <li><a href="./Assets/Files/Matthew Knudson IT - 20200521.pdf">Resume</a></li>
+        <ul class="navigation">
+            <li><a href="#aboutMe">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contactMe">Contact</a></li>
         </ul>
+
     </header>
-    <content class="personalInfo">
+
+    <content id="aboutMe" class="personalInfo">
         <h2 class="personalInfo-side">About Me</h2>
         <p class="personalInfo-text">Hey! I'm going to write a bio here. Lorem ipsum dolor sit amet, consectetur
             adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -28,7 +29,7 @@
             cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <img class="personalPhoto" src="./Assets/Images/Bucky.jpg">
         </content>
-    <content class="portfolioContainer">
+    <content id="portfolio" class="portfolioContainer">
         <h2 class="portfolio-side">Portfolio</h2>
         <content class="portfolioBlocks">
             <!-- add code below to bottom of this class to add additional project cards.
@@ -88,6 +89,14 @@
 
             </section>
         </content>
+    </content>
+    <content id="contactMe" class="contactContainer">
+        <h2 class="contact-side">Contact Me</h2>
+        <ul class="contactInfo">
+            <li>m.j.knudson@gmail.com</li>
+            <li><a href="https://github.com/Shagomir"> Github</a></li>
+            <li><a href="./Assets/Files/Matthew Knudson IT - 20200521.pdf">Resume</a></li>
+        </ul>
     </content>
     <footer>
         <p>Made by Matthew Knudson in HTML and CSS</p>
