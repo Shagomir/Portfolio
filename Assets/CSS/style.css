@@ -25,11 +25,26 @@ body {
     width: auto;
     padding: .25em;
     margin: 1em;
+    font-family: sans-serif;
+}
+
+a {text-decoration: none;}
+
+a:link {
+    color: var(--brightAccent);
+}
+a:visited {
+    color: var(--darkAccent);
+}
+a:hover {
+    text-decoration: underline;
+    color:var(--textColor)
 }
 
 h1 {
-    font-size: 200%;
-    color: var(--brightAccent)
+    font-size: 250%;
+    color: var(--textColor);
+    font-family: serif
 }
 
 h2 {
@@ -45,6 +60,10 @@ h3 {
 h4 {
     font-size: 120%;
     color: var(--brightAccent)
+}
+
+p {
+    font-family: serif;
 }
 
 header {
@@ -75,6 +94,8 @@ header {
 .contactInfo li,
 .navigation li {
     padding: .5em;
+    font-size: 120%;
+    font-weight: bold;
 }
 
 
@@ -171,23 +192,6 @@ https://www.w3docs.com/snippets/css/how-to-make-a-div-a-clickable-link.html */
 .project-card p {
     font-size: 90%;
     color: var(--textColor);
-}
-
-h1 {
-    font-size: 200%;
-    color: var(--brightAccent);
-
-}
-
-h2 {
-    font-size: 150%;
-    color: var(--brightAccent)
-}
-
-h3 {
-
-    font-size: 120%;
-    color: var(--brightAccent)
 }
 
 .project-description {
