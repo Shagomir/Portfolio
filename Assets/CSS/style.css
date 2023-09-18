@@ -78,7 +78,8 @@ header {
 }
 
 
-/* This ensures that the two side bars have the same properties and sizes.  */
+/* This ensures that the side bars all  */
+/* have the same properties and sizes.  */
 
 h2[class$="-side"] {
     min-width: 6em;
@@ -87,6 +88,8 @@ h2[class$="-side"] {
 
 }
 
+
+/* consistent flex box formatting! */
 .personalInfo,
 .portfolioContainer,
 .contactContainer {
@@ -106,11 +109,11 @@ h2[class$="-side"] {
     margin: 1em;
     flex: 1 1 300px;
     width: 20%;
-    object-fit: contain;
-    /* Forces image to maintain ratios. 
-    https://stackoverflow.com/questions/30788131/maintain-image-aspect-ratio-when-changing-height*/
     border-radius: 8px;
 
+     /* Forces image to fit in the flex box properly
+    https://stackoverflow.com/questions/30788131/maintain-image-aspect-ratio-when-changing-height */
+    object-fit: cover;
 }
 
 
@@ -151,7 +154,8 @@ front of the page. */
     transition: all 0.5s ease-in-out
 }
 
-/* code below makes the whole project card a clickable link. https://www.w3docs.com/snippets/css/how-to-make-a-div-a-clickable-link.html */
+/* code below makes the whole project card a clickable link. 
+https://www.w3docs.com/snippets/css/how-to-make-a-div-a-clickable-link.html */
 
 .project-link {
     position: absolute;
@@ -168,8 +172,6 @@ front of the page. */
     font-size: 90%;
     color: var(--textColor);
 }
-
-
 
 h1 {
     font-size: 200%;
@@ -188,20 +190,13 @@ h3 {
     color: var(--brightAccent)
 }
 
-
-
 .project-description {
     padding: .5em
 }
 
-
-
 .project-card:hover {
     box-shadow: inset 0px 0px 10px var(--brightAccent), 0 0 15px var(--darkAccent);
 }
-
-
-
 
 footer {
     padding: 1em;
@@ -218,7 +213,8 @@ footer p {
 for the background image which displays with a gradient overlay to make the 
 text readable.  */
 
-/* check these properties to resolve pixel bleed - Pixel bleed resolved by making the image take up the entire card and adding a slight box shadow */
+/* check these properties to resolve pixel bleed - Pixel bleed resolved by 
+making the image take up the entire card and adding a slight box shadow */
 
 span[id^="imagep"] {
     position: absolute;
@@ -287,7 +283,8 @@ span[id^="imagep"] {
 
 }
 
-/* vertical style for mobile and tablets */
+/* vertical style for mobile and tablets. Selected 768px as 
+the breakpoint as testing found this most aesthetic. */
 
 @media (max-width:768px) {
 
