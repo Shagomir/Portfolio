@@ -63,7 +63,8 @@ header {
 
 }
 
-.contactInfo, .navigation {
+.contactInfo,
+.navigation {
 
     display: flex;
     flex-flow: row nowrap;
@@ -86,7 +87,9 @@ h2[class$="-side"] {
 
 }
 
-.personalInfo, .portfolioContainer, .contactContainer {
+.personalInfo,
+.portfolioContainer,
+.contactContainer {
     display: flex;
     flex-flow: row nowrap;
     flex: 1 1 100%;
@@ -157,7 +160,7 @@ front of the page. */
     top: 0;
     left: 0;
     z-index: 1;
-} 
+}
 
 
 
@@ -197,6 +200,20 @@ h3 {
     box-shadow: inset 0px 0px 10px var(--brightAccent), 0 0 15px var(--darkAccent);
 }
 
+
+
+
+footer {
+    padding: 1em;
+    text-align: center;
+
+}
+
+footer p {
+    font-size: 80%;
+    color: var(--darkAccent)
+}
+
 /* This gives all background images on the card the same properties, except 
 for the background image which displays with a gradient overlay to make the 
 text readable.  */
@@ -216,17 +233,6 @@ span[id^="imagep"] {
     background-size: cover;
     background-position: top left;
     display: block;
-}
-
-footer {
-    padding: 1em;
-    text-align: center;
-
-}
-
-footer p {
-    font-size: 80%;
-    color: var(--darkAccent)
 }
 
 /* Images go here to apply the gradient over the same background image. */
@@ -322,7 +328,8 @@ footer p {
         height: fit-content;
     }
 
-    .portfolioContainer, .contactContainer {
+    .portfolioContainer,
+    .contactContainer {
         flex-flow: column nowrap;
     }
 
@@ -339,7 +346,8 @@ footer p {
         width: 90%;
 
     }
-    .contactInfo{
+
+    .contactInfo {
         justify-content: center;
     }
 }
