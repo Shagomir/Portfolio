@@ -38,7 +38,7 @@ a:visited {
 }
 a:hover {
     text-decoration: underline;
-    color:var(--textColor)
+    color: var(--textColor)
 }
 
 h1 {
