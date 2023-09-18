@@ -201,7 +201,7 @@ h3 {
 for the background image which displays with a gradient overlay to make the 
 text readable.  */
 
-/* check these properties to resolve pixel bleed */
+/* check these properties to resolve pixel bleed - Pixel bleed resolved by making the image take up the entire card and adding a slight box shadow */
 
 span[id^="imagep"] {
     position: absolute;
