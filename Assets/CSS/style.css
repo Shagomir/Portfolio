@@ -20,10 +20,7 @@ body {
     color: var(--textColor);
     font-size: 16px;
     line-height: 1.5;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin:auto;
     width: auto;
     padding: .25em;
     margin: 1em;
@@ -98,8 +95,16 @@ h2[class$="-side"] {
 
 .personalInfo-text {
     margin: 1em;
-    width: max-content;
     text-align: left;
+}
+
+.personalPhoto {
+    margin: 1em;
+    flex: 1 1 300px;
+    width: 20%;
+    object-fit: contain;
+    border-radius: 8px;
+  
 }
 
 .portfolioContainer {
@@ -270,4 +275,57 @@ footer {
             var(--background) var(--blendHeight),
             var(--clear)), url('../Images/css\ cheatsheet.PNG');
 
+}
+
+/* vertical style for mobile */
+
+@media (max-width:768px) {
+
+    h1{
+        text-align: center;
+    }
+    header {
+        display: flex;
+        flex-flow:column nowrap;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    h2[class$="-side"] {
+        min-width: 6em;
+        border-right: none;
+        border-bottom: var(--border);
+        margin-top: 1em;
+    
+    }
+    .personalInfo {
+        flex-flow: column wrap;    
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .personalPhoto{
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+
+    }
+    .project-card{
+        height: fit-content;
+    }
+    .portfolioContainer {
+        flex-flow: column nowrap;
+    }
+    .portfolioBlocks {
+        display: flex;
+        flex-flow: column-reverse nowrap;
+        align-items: center;
+        justify-content: stretch;   
+    }
+    .project-card {
+        flex: 1 1 100%;
+        min-height: 300px;
+        width: 90%;
+   
+    }
 }
