@@ -78,7 +78,7 @@ header {
 
 .nameMarquee {
     width: 20em;
-    margin: 1em;
+    margin-bottom: 1em;
 
 }
 
@@ -350,5 +350,6 @@ the breakpoint as testing found this most aesthetic. */
 
     .contactInfo {
         justify-content: center;
+        flex-direction: column;
     }
 }
