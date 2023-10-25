@@ -287,6 +287,16 @@ span[id^="imagep"] {
 
 }
 
+#imagep6 {
+
+    background-image:
+        linear-gradient(to bottom,
+            var(--background),
+            var(--background) var(--blendHeight),
+            var(--clear)), url('../Images/css\ drydog.PNG');
+
+}
+
 /* vertical style for mobile and tablets. Selected 768px as 
 the breakpoint as testing found this most aesthetic. */
 
