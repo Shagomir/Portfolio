@@ -293,7 +293,7 @@ span[id^="imagep"] {
         linear-gradient(to bottom,
             var(--background),
             var(--background) var(--blendHeight),
-            var(--clear)), url('../Images/css\ drydog.PNG');
+            var(--clear)), url('../Images/drydog.PNG');
 
 }
 
